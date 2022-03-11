@@ -22,8 +22,13 @@ func (s *Stack) Push(newData int) {
 	}
 }
 
-func (s *Stack) Pop(popedData int) {
-
+func (s *Stack) Pop() (int, bool) {
+	if	s.IsEmpty() {
+		fmt.Println("Empty stack!!")
+	}
+	temp := s.Top.Data
+	s.Top = s.Top.NextNode
+	return temp, true
 }
 
 func (s *Stack) IsEmpty() bool {

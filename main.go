@@ -25,5 +25,6 @@ func main(){
 	stack.Push(5)
 	stack.Push(10)
 	stack.Push(87)
+	stack.Pop()
 	stack.Print()
 }
