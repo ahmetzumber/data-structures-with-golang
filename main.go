@@ -11,6 +11,6 @@ func main(){
 	list.AddLast(&node1)
 	list.AddLast(&node2)
 	list.AddLast(&node3)
-	list.AddLast(&node4)
+	list.AddFirst(&node4)
 	list.Print()
 }
