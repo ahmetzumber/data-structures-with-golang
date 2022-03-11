@@ -16,6 +16,7 @@ func main(){
 	list.AddLast(&node3)
 	list.AddFirst(&node4)
 	list.AddAfter(5,1)
+	list.Remove(18)
 	list.Print()
 	fmt.Print("Size: ",list.Size())
 }

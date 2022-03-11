@@ -45,7 +45,21 @@ func (l *LinkedList) AddAfter(search int, newData int){
 }
 
 func (l *LinkedList) Remove(removedData int){
-
+	if l.Head == nil {
+		fmt.Println("Empty list!!")
+	}else {
+		if l.Head.Data == removedData {
+			l.Head = l.Head.NextNode
+		}else {
+			temp := l.Head
+			for temp.NextNode != nil && temp.NextNode.Data != removedData {
+				temp = temp.NextNode
+			}
+			if temp.NextNode != nil {
+				temp.NextNode = temp.NextNode.NextNode
+			}
+		}
+	}
 }
 
 func (l *LinkedList) Print(){
