@@ -1,6 +1,9 @@
 package main
 
-import "data-structures/linkedlist"
+import (
+	"data-structures/linkedlist"
+	"fmt"
+)
 
 func main(){
 	list := linkedlist.LinkedList{}
@@ -12,5 +15,7 @@ func main(){
 	list.AddLast(&node2)
 	list.AddLast(&node3)
 	list.AddFirst(&node4)
+	list.AddAfter(5,1)
 	list.Print()
+	fmt.Print("Size: ",list.Size())
 }

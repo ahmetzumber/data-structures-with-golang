@@ -9,7 +9,6 @@ type Node struct {
 
 type LinkedList struct {
 	Head *Node
-	Length int
 }
 
 func (l *LinkedList) AddFirst(newNode *Node){
@@ -29,15 +28,16 @@ func (l *LinkedList) AddLast(newNode *Node){
 	}
 }
 
-func (l *LinkedList) AddAfter(search *Node, newNode *Node){
+func (l *LinkedList) AddAfter(search int, newData int){
 	if l.Head == nil {
 		fmt.Println("Empty list!!")
 	}else {
 		temp := l.Head
-		for temp != nil && temp.Data != search.Data {
+		for temp != nil && temp.Data != search {
 			temp = temp.NextNode
 		}
 		if temp != nil {
+			newNode := &Node{Data: newData}
 			newNode.NextNode = temp.NextNode
 			temp.NextNode = newNode
 		}
@@ -56,4 +56,18 @@ func (l *LinkedList) Print(){
 		tempNode = tempNode.NextNode
 	}
 	fmt.Println("null")
+}
+
+func (l *LinkedList) Size() int {
+	count := 0
+	if l.Head == nil {
+		return count
+	}else {
+		temp := l.Head
+		for temp != nil {
+			count++
+			temp = temp.NextNode
+		}
+		return count
+	}
 }
