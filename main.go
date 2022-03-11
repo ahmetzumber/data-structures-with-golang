@@ -2,7 +2,7 @@ package main
 
 import (
 	"data-structures/linkedlist"
-	"fmt"
+	stack2 "data-structures/stack"
 )
 
 func main(){
@@ -17,6 +17,13 @@ func main(){
 	list.AddFirst(&node4)
 	list.AddAfter(5,1)
 	list.Remove(18)
-	list.Print()
-	fmt.Print("Size: ",list.Size())
+	//list.Print()
+	//fmt.Print("Size: ",list.Size())
+	// ------- STACK ---------
+	stack := stack2.Stack{}
+	stack.Push(32)
+	stack.Push(5)
+	stack.Push(10)
+	stack.Push(87)
+	stack.Print()
 }
