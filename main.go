@@ -2,6 +2,7 @@ package main
 
 import (
 	"data-structures/linkedlist"
+	"data-structures/queu"
 	stack2 "data-structures/stack"
 )
 
@@ -27,4 +28,12 @@ func main(){
 	stack.Push(87)
 	stack.Pop()
 	stack.Print()
+	// ----- QUEUE -----
+	queue := queu.Queu{}
+	queue.Enqueu(4)
+	queue.Enqueu(88)
+	queue.Enqueu(0)
+	queue.Enqueu(12)
+	queue.Print()
+
 }
